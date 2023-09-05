@@ -9,6 +9,19 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Bump version in package.json
+        run: npm version minor
+      - name: Push changes
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git push --follow-tags
       - name: Bump version and push tag
         uses: undergroundwires/bump-everywhere@master
         with:
@@ -16,3 +29,4 @@ jobs:
           user: ${{ github.actor }}
           git-token: ${{ secrets.GITHUB_TOKEN }}
           release-type: 'none'
+
