@@ -1,0 +1,18 @@
+name: Bump version
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+jobs:
+  bump-version:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bump version and push tag
+        uses: undergroundwires/bump-everywhere@master
+        with:
+          repository: ${{ github.repository }}
+          user: ${{ github.actor }}
+          git-token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: 'none'
