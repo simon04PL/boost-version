@@ -30,6 +30,6 @@ jobs:
         with:
           repository: ${{ github.repository }}
           user: ${{ github.actor }}
-          git-token: ${{ secrets.GITHUB_TOKEN }}
+          git-token: ${{ github.token }}
           release-type: 'none'
 
