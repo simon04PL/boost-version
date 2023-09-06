@@ -19,8 +19,8 @@ jobs:
         run: npm version minor
       - name: Push changes
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
+          git config --global user.name 'simon04PL'
+          git config --global user.email 'szymon.msa@gmail.com'
           git push --follow-tags
       - name: Bump version and push tag
         uses: undergroundwires/bump-everywhere@master
