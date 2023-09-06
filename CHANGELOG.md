@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 (2023-09-06)
+
+* test-9 | [2c7b955](https://github.com/simon04PL/pryzmat-test-version/commit/2c7b955339e7502babb42ca2416ec7991e8b6584)
+
+[compare](https://github.com/simon04PL/pryzmat-test-version/compare/0.1.0...0.1.1)
+
 ## 0.1.0 (2023-09-06)
 
 * kopia | [75f9a2f](https://github.com/simon04PL/pryzmat-test-version/commit/75f9a2fbb5b7cab041488d8c7fbf1bf31cc3d5a2)
