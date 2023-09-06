@@ -15,11 +15,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Bump version and push tag
-        uses: undergroundwires/bump-everywhere@master
+      - name:  'Automated Version Bump'
+        uses:  'phips28/gh-action-bump-version@master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          PACKAGEJSON_DIR:  'extension'
         with:
-          repository: ${{ github.repository }}
-          user: ${{ github.actor }}
-          git-token: ${{ secrets.PAT }}
-          release-type: 'none'
+          minor-wording:  'add,Adds,new'
+          major-wording:  'MAJOR,cut-major'
+          patch-wording:  'patch,fixes'
+          rc-wording:     'RELEASE,alpha'
 
