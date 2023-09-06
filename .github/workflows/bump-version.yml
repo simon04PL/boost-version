@@ -31,5 +31,5 @@ jobs:
           repository: ${{ github.repository }}
           user: ${{ github.actor }}
           git-token: ${{ github.token }}
-          release-type: 'none'
+          release-type: 'release'
 
